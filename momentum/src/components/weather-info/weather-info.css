@@ -1,0 +1,27 @@
+.weather-block
+{
+    align-self: flex-end;
+    background-color: rgba(16, 14, 14, 0.3);
+    border-radius: 10px;
+
+}
+.weather-block,
+.weather-data {
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: white;
+
+}
+.location {
+    /* display: block; */
+    width: 96%;
+    height: 1.5rem;
+    box-shadow: none;
+    border: 1px solid rgba(149, 136, 136, 0.8);
+    background: rgba(254, 255, 255);
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 1.5rem;
+}
