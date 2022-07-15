@@ -1,5 +1,8 @@
 import { useEffect, useState } from 'react';
 import './clocks.css'
+import React from 'react';
+import {createContext} from "react";
+import { TimeContext } from './timeContext';
 
 const Clocks = () => {
     const date = new Date();
@@ -19,7 +22,6 @@ const Clocks = () => {
         "December"
       ];
     const [time, setTime] = useState(date.toLocaleTimeString());
-   
     useEffect(()=>{
         setInterval(()=>{
             setTime(new Date().toLocaleTimeString())

@@ -7,10 +7,6 @@ const Weather = () => {
     let [humidity, setHumidity] = useState(null);
     let [wind, setWind] = useState(null);
 
-    const handleClear = (e) =>  {
-        e.preventDefault()
-        setCity('')
-      }
     function changeCity(event) {
         setCity(event.target.value);
      }
@@ -35,17 +31,17 @@ const Weather = () => {
                 setCity(data.data[0].city_name);
                 setTemp(data.data[0].temp);
                 setHumidity(Math.round(data.data[0].rh));
-                setWind(data.data[0].wind_spd.toFixed(2))
-             .then(()=> handleClear(event))   
+                setWind(data.data[0].wind_spd.toFixed(2));  
         })
-        handleClear()
+        setCity('')
     }}
 
     return(
         <div className="weather-block">
-            <input type="text" className='location' value={city} placeholder='Enter your city' onChange={changeCity} onKeyPress={searchLocation}/>
+            <input type="text" className='location input-field' placeholder='Enter your city' 
+            onChange={changeCity} onKeyPress={searchLocation}/>
             <div className="weather-data">
-                <div className="city">Your city: {city}</div>
+                <div className="city">Your city: {city? city : null}</div>
                 <div className="temp">Temperature: {temp} °C</div>
                 <div className="humidity">Relative humidity: {humidity}%</div>
                 <div className="wind-speed">Wind speed: {wind} м/с</div>

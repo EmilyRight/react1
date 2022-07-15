@@ -1,0 +1,22 @@
+.greeting-block {
+    display: flex;
+    flex-direction: row;
+    font-size: 5rem;
+    gap: 20px;
+    color: aliceblue;
+    text-shadow: 0 0 10px black;
+    align-items: flex-end;
+}
+
+/* .greeting {
+ 
+}
+.name {
+    display: none;
+} */
+.input-field{
+    height: 2.5rem;
+    align-self: center;
+    margin-top: 15px;
+}
+

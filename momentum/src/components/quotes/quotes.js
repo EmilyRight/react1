@@ -37,9 +37,16 @@ function Quote() {
 
     return (
         <div className="quote-block">
-            <div className="quote">{quote}</div>
-            <div className="author">{author}</div>
-            <button className='floating-button' onClick={getQuote}>Get a quote</button>
+            <div className="quote">
+                {quote}
+                </div>
+            <div className="author">
+                {author}
+                </div>
+            <button className='floating-button' 
+            onClick={getQuote}
+            >
+                Get a quote</button>
         </div>
 
     );
